@@ -4,9 +4,9 @@
 echo hello the world!
 echo $INPUT_TEST
 
-PY_FILE_PATH = echo pwd
-python $PY_FILE_PATH/action.py
+python ./action.py
 
 echo bye bye!
+echo "::set-output name=test_out::aaaabbbbcccc"
 
 

@@ -5,6 +5,9 @@ inputs:
     description: 'input test'
     required: true
     default: 'xxx'
+outputs:
+  test_out: # id of the output
+    description: 'output test'
 runs:
   using: 'node12'
   main: 'action.js'
