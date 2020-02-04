@@ -1,11 +1,7 @@
 import os
 #print(os.listdir(os.getcwd()))
 #print("hello the world from python!!!")
-command = 'cd my_micropython/ports/esp32 && pwd'
-print(command)
-print(os.popen(command).read())
-
-command = 'make'
+command = 'cd my_micropython/ports/esp32 && pwd && make'
 print(command)
 print(os.popen(command).read())
 
