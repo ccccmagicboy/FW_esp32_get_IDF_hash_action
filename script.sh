@@ -4,6 +4,9 @@
 echo hello the world!
 echo $INPUT_TEST
 
-python action.py
+PY_FILE_PATH = echo pwd
+python $PY_FILE_PATH/action.py
+
+echo bye bye!
 
 
