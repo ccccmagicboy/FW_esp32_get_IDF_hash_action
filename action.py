@@ -5,9 +5,9 @@ command = 'cd my_micropython/ports/esp32 && pwd && make'
 print(command)
 result = os.popen(command).read()
 print(result)
-for line in result:
+for line in result.splitlines():
     if 'Supported git hash' in line:
-        print(line)
+        print('find a line with hash: {0:s}'.format(line))
 
 command = 'echo "::set-output name=hash_v3::{0:s}"'.format('V333333')
 print(command)
