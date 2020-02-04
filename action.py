@@ -1,6 +1,9 @@
 import os
 #print(os.listdir(os.getcwd()))
 #print("hello the world from python!!!")
+v3 = ''
+v4 = ''
+
 command = 'cd my_micropython/ports/esp32 && pwd && make'
 print(command)
 result = os.popen(command).read()
@@ -13,7 +16,7 @@ for line in result.splitlines():
         if 'v3' in line_temp[0]:
             v3 = line_temp[1].strip()
         elif 'v4' in line_temp[0]:
-            v4 = line_temp[2].strip()
+            v4 = line_temp[1].strip()
 
 command = 'echo "::set-output name=hash_v3::{0:s}"'.format(v3)
 print(command)
