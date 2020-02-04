@@ -3,16 +3,22 @@ const core = require('@actions/core');
 function run() {
   try {
     // This is just a thin wrapper around bash
-    const script = require('path').resolve(__dirname, 'script.sh');
+    
+    const exec = require('child_process').exec, child;
+    const testscript = exec('sh script.sh');
 
-    console.log(script);
-    var child = require('child_process').execFile(script);
-    child.stdout.on('data', (data) => {
-      console.log(data.toString());
+    testscript.stdout.on('data', function(data){
+        console.log(data);
+        // sendBackInfo();
     });
 
-    child.on('close', (code) => {
-      console.log(`child process exited with code ${code}`);
+    testscript.stderr.on('data', function(data){
+        console.log(data);
+        // triggerErrorStuff();
+    });    
+
+    testscript.on('close', (code) => {
+      console.log(`testscript process exited with code ${code}`);
       process.exit(code);
     });
   }
