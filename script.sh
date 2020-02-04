@@ -1,6 +1,6 @@
 #!/bin/bash
-#auther: ccccmagicboy
+# auther: ccccmagicboy
 
-echo "hello the world!"
+echo $INPUT_TEST
 
 
