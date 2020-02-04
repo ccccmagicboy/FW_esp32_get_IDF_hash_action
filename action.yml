@@ -1,0 +1,10 @@
+name: 'Get the IDF hash for micropython-esp32'
+description: 'use it to get the newest micropython-esp32 idf lib hash, both v3.x and v4.x'
+runs:
+  using: 'node12'
+  main: 'action.js'
+branding:
+  icon: 'terminal'
+  color: 'green'
+
+
