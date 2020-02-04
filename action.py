@@ -3,7 +3,11 @@ import os
 #print("hello the world from python!!!")
 command = 'cd my_micropython/ports/esp32 && pwd && make'
 print(command)
-print(os.popen(command).read())
+result = os.popen(command).read()
+print(result)
+for line in result:
+    if 'Supported git hash' in line:
+        print(line)
 
 command = 'echo "::set-output name=hash_v3::{0:s}"'.format('V333333')
 print(command)
