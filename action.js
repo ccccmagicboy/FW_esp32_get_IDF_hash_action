@@ -4,7 +4,7 @@ function run() {
   try {
     // This is just a thin wrapper around bash
     
-    const exec = require('child_process').exec, child;
+    const exec = require('child_process').exec;
     const testscript = exec('sh script.sh');
 
     testscript.stdout.on('data', function(data){
