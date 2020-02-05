@@ -5,12 +5,18 @@ inputs:
     description: 'input test'
     required: true
     default: 'xxx'
+  idf:
+    description: 'input'
+    required: true
+    default: 'yyy'
 outputs:
   test_out: # id of the output
     description: 'output test'
   hash_v3: # id of hash_v3 output
     description: 'output test'
   hash_v4: # if of hash_v4 output
+    description: 'output test'
+  hash_selected: # the hash output
     description: 'output test'    
 runs:
   using: 'node12'

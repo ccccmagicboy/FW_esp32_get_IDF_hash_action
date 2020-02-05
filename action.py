@@ -26,4 +26,15 @@ command = 'echo "::set-output name=hash_v4::{0:s}"'.format(v4)
 print(command)
 print(os.popen(command).read())
 
+print(os.environ['INPUT_IDF'])
+
+if 'IDF3' == os.environ['INPUT_IDF']:
+    command = 'echo "::set-output name=hash_selected::{0:s}"'.format(v3)
+    print(command)
+    print(os.popen(command).read())
+elif 'IDF4' == os.environ['INPUT_IDF']:
+    command = 'echo "::set-output name=hash_selected::{0:s}"'.format(v4)
+    print(command)
+    print(os.popen(command).read())
+
 
